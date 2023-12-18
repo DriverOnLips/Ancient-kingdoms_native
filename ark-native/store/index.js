@@ -1,4 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { deviceReducer } from './deviceSlice';
+import { kingdomReducer } from './kingdomSlice';
 
-export const store = configureStore({ reducer: { device: deviceReducer } });
+export const store = configureStore({ reducer: { kingdom: kingdomReducer } });

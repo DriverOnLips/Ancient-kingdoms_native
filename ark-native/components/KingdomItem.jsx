@@ -1,26 +1,27 @@
 import { View, Text, StyleSheet, Image, Button } from 'react-native';
 import React from 'react';
 
-export default function DeviceCard({ navigation, ...props }) {
+export default function KingdomItem({ navigation, ...props }) {
     const handlePress = () => {
-        navigation.navigate('Device', { id: props.id });
+        navigation.navigate('Kingdom', { id: props.ID });
     };
 
     return (
         <View style={styles.card}>
-            <Image
-                style={styles.image}
-                source={{ uri: `http://192.168.0.104:5000/${props.image}` }}
-                resizeMode='contain'
-            />
-            <View style={styles.container}>
-                <Text style={styles.brandTitle}>{props.brand.title}</Text>
-                <View style={styles.row}>
-                    <Text style={styles.text}>{props.title}</Text>
-                    <Text style={styles.text}>{props.price} р.</Text>
-                </View>
+          <Image
+            style={styles.image}
+            src={ props.Image }
+            // source={{ uri: `http://192.168.21.127:8000/${props.image}` }}
+            resizeMode='contain'
+          />
+          <View style={styles.container}>
+            <Text style={styles.brandTitle}>{props.Name}</Text>
+            <View style={styles.row}>
+              <Text style={styles.text}>{props.Capital}</Text>
+              <Text style={styles.text}>{props.State}</Text>
             </View>
-            <Button title='View details' onPress={handlePress} />
+          </View>
+          <Button title='Подробнее' onPress={handlePress} />
         </View>
     );
 }
