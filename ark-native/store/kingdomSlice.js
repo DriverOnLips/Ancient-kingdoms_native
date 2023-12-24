@@ -10,6 +10,7 @@ export const kingdomSlice = createSlice({
     initialState,
     reducers: {
         setKingdoms: (state, { payload }) => {
+          console.log(payload)
             state.kingdoms = payload;
         },
         setKingdom: (state, { payload }) => {

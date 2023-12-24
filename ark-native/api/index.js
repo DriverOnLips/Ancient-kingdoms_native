@@ -12,7 +12,7 @@ export class Api {
     }
 
     Api.instance = this;
-    this.#baseURL = 'http://192.168.21.127:8000';
+    this.#baseURL = 'http://172.16.80.131:8000';
 
     this.#config = [
       { name: 'getKingdomsByName', url: `${this.#baseURL}/kingdoms` },
